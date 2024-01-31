@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Image, Heading, Text, VStack, HStack, List, ListItem } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
 const Footer = ({isTesti}) => {
  
@@ -65,13 +66,15 @@ const Footer = ({isTesti}) => {
 const CustomColumn=({columnData})=>{
     return(
         
-        <VStack align={{base:'center',md:'flex-start'}}>
+        <VStack  zIndex={2} align={{base:'center',md:'flex-start'}}>
           {columnData.map((item) => (
             <Box key={item.id} mb={4}>
               <Heading fontSize='1.5rem' mb='1rem'  textAlign={{base:'center',md:'left'}} >{item.heading}</Heading>
               <List>
                 {item.options.map((option) => (
+                  <Link to={option==='Terms of Use'? '/termsAndConditions':option==='Privacy Policy'?'/privacyPolicy':null}>
                   <ListItem textAlign={{base:'center',md:'left'}} _hover={{cursor:'pointer' ,color:'white'}} color='#546e87' key={option}>{option}</ListItem>
+                  </Link>
                 ))}
               </List>
             </Box>

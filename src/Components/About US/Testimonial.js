@@ -5,15 +5,9 @@ import AboutUsData from './AboutUsData';
 
 
 const Testimonial = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
- 
-
- 
-
-  
-
-  const handleImageClick = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
+  const [activeIndex, setActiveIndex] = useState(2);
+ const handleImageClick = (index) => {
+    setActiveIndex(activeIndex === index ? 2 : index);
   };
 
   return (
@@ -32,7 +26,7 @@ const Testimonial = () => {
               alignItems="center"
               gap="1rem"
               zIndex={1}
-             mt={{base:'0rem',md:`${testimonial.gap}rem`}}
+              mt={{base:'0rem',md:`${testimonial.gap}rem`}}
               width={{base:'100%',md:'100%'}} // 20% to have 5 columns
               cursor="pointer"
               transition="border 0.3s"

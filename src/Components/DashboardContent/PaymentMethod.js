@@ -88,7 +88,7 @@ const PaymentMethod = () => {
                 }`}
                 alt={method.label}
                 width={{base:'60px',md:'120px'}}
-                height={{base:'60px',md:'80px'}}
+                height={{base:'50px',md:'80px'}}
               />
             </Box>
           ))}

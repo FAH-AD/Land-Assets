@@ -248,8 +248,13 @@ const SignUpForm = () => {
           mt={{ base: "1.5rem", md: "3rem" }}
           spacing={{ base: "0.4rem", md: "1rem" }}
         >
+          <Link to='/termsAndConditions'>
           <CustomText txt="Terms & Conditions" />
+          </Link>
+          <Link to='/privacyPolicy'>
+        
           <CustomText txt=" Privacy Policy" />
+          </Link>
           <CustomText txt=" Help" />
         </HStack>
       </VStack>

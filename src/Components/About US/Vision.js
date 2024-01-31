@@ -5,7 +5,7 @@ import { Box, Flex, Heading, Image, Text, VStack } from '@chakra-ui/react';
 
 const Vision = () => {
   return (
-    <Flex margin={{base:'2rem 1.5rem',md:'3rem 4rem'}} flexDirection={{base:'column',md:'row'}} gap={{base:'1rem',md:'2rem'}}>
+    <Flex margin={{base:'2rem',md:'3rem 4rem'}} flexDirection={{base:'column',md:'row'}} gap={{base:'1rem',md:'2rem'}}>
       {/* Left Side */}
       <Box p={8} py={{base:'1rem',md:'2rem'}} flex="1" alignItems='flex-start'>
         <Heading as="h2"fontSize={{base:'2rem',md:'3rem'}}  textAlign={{base:'center',md:'left'}} color='green.800'  mb={4}>
@@ -22,10 +22,10 @@ const Vision = () => {
 
      
       <Box p={8} flex="1">
-        <VStack align="start" spacing={4}>
+        <VStack align={{base:'center',md:'start'}} spacing={4}>
        
           <Box>
-          <Flex align="center" gap='1rem'>
+          <Flex align="center" gap='1rem' justifyContent={{base:'center',md:'start'}}>
             
              <Image src={`${process.env.PUBLIC_URL}/Assets/Images/vision@4x.png`}  width={{base:'40px',md:'50px'}}/>
               <Heading fontSize={{base:'2rem',md:'3rem'}}  color='green.800'>Mission</Heading>
@@ -38,7 +38,7 @@ const Vision = () => {
 
        
           <Box>
-          <Flex align="center" gap='1rem'>
+          <Flex align='center'  justifyContent={{base:'center',md:'start'}} gap='1rem'>
              
               <Image src={`${process.env.PUBLIC_URL}/Assets/Images/mission@4x.png`} width={{base:'40px',md:'50px'}}/>
               <Heading fontSize={{base:'2rem',md:'3rem'}} color='green.800'>Vision</Heading>
